@@ -95,8 +95,8 @@
                     </div>
 
                      <div class="bg-indigo-100 border-r-4 border-indigo-500 text-indigo-800 p-4 rounded-lg shadow-md my-8" role="alert">
-                        <p class="font-bold">עדכון (16/04):</p>
-                        <p>עוד אימון מצוין! התקדמות בלחיצת חזה בסמית' (40 ק"ג ל-6 חזרות). הוספנו למעקב שורה של תרגילים חדשים כולל לחיצת רגליים (220 ק"ג) ודדליפט רומני. ממשיכים לשבור שיאים ולצבור מסה!</p>
+                        <p class="font-bold">עדכון (30/04):</p>
+                        <p>התקדמות מטורפת! שיאים חדשים נשברו: לחיצת חזה בסמית' טיפסה ל-42.5 ק"ג ל-8 חזרות (כל צד)! פולי עליון 62.5 ק"ג, רומני 90 ק"ג, ועוד המון שיאים. ממשיכים את מגמת העלייה!</p>
                     </div>
 
                     <!-- User Details -->
@@ -122,7 +122,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">לחיצת חזה (סמית')</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">40 ק"ג x 6 <span class="text-xs text-gray-500">(כל צד)</span></span>
+                                    <span class="font-bold text-lg">42.5 ק"ג x 8 <span class="text-xs text-gray-500">(כל צד)</span></span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-smithBench"></canvas>
@@ -144,7 +144,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">פולי עליון (מכונה)</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">60 ק"ג x 7 <span class="text-xs text-gray-500">(כל צד)</span></span>
+                                    <span class="font-bold text-lg">62.5 ק"ג x 6 <span class="text-xs text-gray-500">(כל צד)</span></span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-machinePulldown"></canvas>
@@ -218,6 +218,7 @@
             smithBenchPress: 'לחיצת חזה (סמית\')',
             wideRow: 'חתירה רחבה',
             tBarRow: 'טי-בר (T-Bar)',
+            tBarRowCloseGrip: 'טי-בר (אחיזה צרה)',
             lateralRaises: 'הרחקות כתפיים',
             smithBehindNeckPress: 'לחיצת כתפיים מאחורי הראש (סמית\')',
             machinePulldown: 'פולי עליון (מכונה)',
@@ -239,14 +240,19 @@
             smithBenchPress: [
                 { weight: 37.5, reps: 5, date: "02/04/2026" },
                 { weight: 40, reps: 5, date: "08/04/2026", note: "כל צד" },
-                { weight: 40, reps: 6, date: "16/04/2026", note: "כל צד" }
+                { weight: 40, reps: 6, date: "16/04/2026", note: "כל צד" },
+                { weight: 42.5, reps: 8, date: "30/04/2026", note: "כל צד" }
             ],
             wideRow: [
                 { weight: 50, reps: 6, date: "02/04/2026" }
             ],
             tBarRow: [
                 { weight: 60, reps: 5, date: "08/04/2026" },
-                { weight: 62.5, reps: 5, date: "16/04/2026" }
+                { weight: 62.5, reps: 5, date: "16/04/2026" },
+                { weight: 62.5, reps: 6, date: "30/04/2026" }
+            ],
+            tBarRowCloseGrip: [
+                { weight: 50, reps: 9, date: "30/04/2026" }
             ],
             lateralRaises: [
                 { weight: 10, reps: 8, date: "02/04/2026" }
@@ -256,7 +262,8 @@
             ],
             machinePulldown: [
                 { weight: 60, reps: 6, date: "02/04/2026" },
-                { weight: 60, reps: 7, date: "08/04/2026", note: "כל צד" }
+                { weight: 60, reps: 7, date: "08/04/2026", note: "כל צד" },
+                { weight: 62.5, reps: 6, date: "30/04/2026", note: "כל צד" }
             ],
             smithBulgarian: [
                 { weight: 22.5, reps: 6, date: "02/04/2026", note: "כל צד" }
@@ -269,27 +276,33 @@
                 { weight: 11, reps: 8, date: "08/04/2026" }
             ],
             cableFly: [
-                { weight: 12.5, reps: 6, date: "02/04/2026" }
+                { weight: 12.5, reps: 6, date: "02/04/2026" },
+                { weight: 15, reps: 6, date: "30/04/2026" }
             ],
             weightedDips: [
-                { weight: 20, reps: 6, date: "08/04/2026", note: "משקל נוסף" }
+                { weight: 20, reps: 6, date: "08/04/2026", note: "משקל נוסף" },
+                { weight: 20, reps: 7, date: "30/04/2026", note: "משקל נוסף" }
             ],
             machinePreacherCurl: [
                 { weight: 30, reps: 5, date: "02/04/2026" },
                 { weight: 35, reps: 8, date: "08/04/2026" },
-                { weight: 30, reps: 7, date: "16/04/2026" }
+                { weight: 30, reps: 7, date: "16/04/2026" },
+                { weight: 30, reps: 8, date: "30/04/2026" }
             ],
             skullCrusher: [
                 { weight: 35, reps: 6, date: "02/04/2026" }
             ],
             romanianDeadlift: [
-                { weight: 80, reps: 8, date: "16/04/2026" }
+                { weight: 80, reps: 8, date: "16/04/2026" },
+                { weight: 90, reps: 6, date: "30/04/2026" }
             ],
             lyingLateralRaises: [
-                { weight: 20, reps: 6, date: "16/04/2026" }
+                { weight: 20, reps: 6, date: "16/04/2026" },
+                { weight: 20, reps: 8, date: "30/04/2026" }
             ],
             highCableFly: [
-                { weight: 10, reps: 8, date: "16/04/2026" }
+                { weight: 10, reps: 8, date: "16/04/2026" },
+                { weight: 12.5, reps: 8, date: "30/04/2026" }
             ],
             rearDeltCableFly: [
                 { weight: 7.5, reps: 8, date: "16/04/2026" }
@@ -469,6 +482,7 @@
     </script>
 </body>
 </html>
+
 
 
 
