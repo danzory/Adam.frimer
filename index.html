@@ -95,8 +95,8 @@
                     </div>
 
                      <div class="bg-indigo-100 border-r-4 border-indigo-500 text-indigo-800 p-4 rounded-lg shadow-md my-8" role="alert">
-                        <p class="font-bold">עדכון (30/04):</p>
-                        <p>התקדמות מטורפת! שיאים חדשים נשברו: לחיצת חזה בסמית' טיפסה ל-42.5 ק"ג ל-8 חזרות (כל צד)! פולי עליון 62.5 ק"ג, רומני 90 ק"ג, ועוד המון שיאים. ממשיכים את מגמת העלייה!</p>
+                        <p class="font-bold">עדכון (14/05):</p>
+                        <p>התקדמות מטורפת! שיאים חדשים נשברו: לחיצת חזה בסמית' טיפסה ל-43.75 ק"ג ל-6 חזרות (כל צד)! פולי עליון 62.5 ק"ג ל-7, רומני 90 ק"ג ל-8, האק סקוואט 225 ל-5 ועוד המון שיאים. ממשיכים את מגמת העלייה!</p>
                     </div>
 
                     <!-- User Details -->
@@ -122,7 +122,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">לחיצת חזה (סמית')</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">42.5 ק"ג x 8 <span class="text-xs text-gray-500">(כל צד)</span></span>
+                                    <span class="font-bold text-lg">43.75 ק"ג x 6 <span class="text-xs text-gray-500">(כל צד)</span></span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-smithBench"></canvas>
@@ -133,7 +133,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">חתירה רחבה</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">50 ק"ג x 6</span>
+                                    <span class="font-bold text-lg">55 ק"ג x 9</span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-wideRow"></canvas>
@@ -144,7 +144,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">פולי עליון (מכונה)</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">62.5 ק"ג x 6 <span class="text-xs text-gray-500">(כל צד)</span></span>
+                                    <span class="font-bold text-lg">62.5 ק"ג x 7 <span class="text-xs text-gray-500">(כל צד)</span></span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-machinePulldown"></canvas>
@@ -241,10 +241,12 @@
                 { weight: 37.5, reps: 5, date: "02/04/2026" },
                 { weight: 40, reps: 5, date: "08/04/2026", note: "כל צד" },
                 { weight: 40, reps: 6, date: "16/04/2026", note: "כל צד" },
-                { weight: 42.5, reps: 8, date: "30/04/2026", note: "כל צד" }
+                { weight: 42.5, reps: 8, date: "30/04/2026", note: "כל צד" },
+                { weight: 43.75, reps: 6, date: "14/05/2026", note: "כל צד" }
             ],
             wideRow: [
-                { weight: 50, reps: 6, date: "02/04/2026" }
+                { weight: 50, reps: 6, date: "02/04/2026" },
+                { weight: 55, reps: 9, date: "14/05/2026" }
             ],
             tBarRow: [
                 { weight: 60, reps: 5, date: "08/04/2026" },
@@ -258,18 +260,21 @@
                 { weight: 10, reps: 8, date: "02/04/2026" }
             ],
             smithBehindNeckPress: [
-                { weight: 20, reps: 5, date: "08/04/2026", note: "כל צד" }
+                { weight: 20, reps: 5, date: "08/04/2026", note: "כל צד" },
+                { weight: 20, reps: 6, date: "14/05/2026", note: "כל צד" }
             ],
             machinePulldown: [
                 { weight: 60, reps: 6, date: "02/04/2026" },
                 { weight: 60, reps: 7, date: "08/04/2026", note: "כל צד" },
-                { weight: 62.5, reps: 6, date: "30/04/2026", note: "כל צד" }
+                { weight: 62.5, reps: 6, date: "30/04/2026", note: "כל צד" },
+                { weight: 62.5, reps: 7, date: "14/05/2026", note: "כל צד" }
             ],
             smithBulgarian: [
                 { weight: 22.5, reps: 6, date: "02/04/2026", note: "כל צד" }
             ],
             hackSquat: [
-                { weight: 220, reps: 6, date: "08/04/2026" }
+                { weight: 220, reps: 6, date: "08/04/2026" },
+                { weight: 225, reps: 5, date: "14/05/2026" }
             ],
             lyingLegCurl: [
                 { weight: 10, reps: 8, date: "02/04/2026" },
@@ -281,7 +286,8 @@
             ],
             weightedDips: [
                 { weight: 20, reps: 6, date: "08/04/2026", note: "משקל נוסף" },
-                { weight: 20, reps: 7, date: "30/04/2026", note: "משקל נוסף" }
+                { weight: 20, reps: 7, date: "30/04/2026", note: "משקל נוסף" },
+                { weight: 21.25, reps: 6, date: "14/05/2026", note: "משקל נוסף" }
             ],
             machinePreacherCurl: [
                 { weight: 30, reps: 5, date: "02/04/2026" },
@@ -294,7 +300,8 @@
             ],
             romanianDeadlift: [
                 { weight: 80, reps: 8, date: "16/04/2026" },
-                { weight: 90, reps: 6, date: "30/04/2026" }
+                { weight: 90, reps: 6, date: "30/04/2026" },
+                { weight: 90, reps: 8, date: "14/05/2026" }
             ],
             lyingLateralRaises: [
                 { weight: 20, reps: 6, date: "16/04/2026" },
@@ -302,7 +309,8 @@
             ],
             highCableFly: [
                 { weight: 10, reps: 8, date: "16/04/2026" },
-                { weight: 12.5, reps: 8, date: "30/04/2026" }
+                { weight: 12.5, reps: 8, date: "30/04/2026" },
+                { weight: 10, reps: 9, date: "14/05/2026" }
             ],
             rearDeltCableFly: [
                 { weight: 7.5, reps: 8, date: "16/04/2026" }
@@ -482,9 +490,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-```
