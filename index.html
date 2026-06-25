@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -90,13 +91,13 @@
                         </div>
                         <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center transition hover:shadow-lg hover:-translate-y-1">
                             <h3 class="text-lg font-semibold text-gray-500 mb-2">סטטוס התקדמות</h3>
-                            <p class="text-3xl font-bold text-green-500">במגמת עלייה מתמדת! 🚀</p>
+                            <p class="text-3xl font-bold text-green-500">במגמת עלייה! 🚀</p>
                         </div>
                     </div>
 
                      <div class="bg-indigo-100 border-r-4 border-indigo-500 text-indigo-800 p-4 rounded-lg shadow-md my-8" role="alert">
-                        <p class="font-bold">עדכון (16/06):</p>
-                        <p>השבירה של השיאים ממשיכה! חזה בסמית' 45 ק"ג, פולי עליון 77 ק"ג, חתירה במוט 70 ק"ג, ועלייה יפה במשקלים בכומר במכונה. תותח אמיתי!</p>
+                        <p class="font-bold">עדכון (25/06):</p>
+                        <p>אימון פסיכי! שיאים חדשים נשברו: לחיצת חזה סמית' 45 ק"ג ל-6 חזרות, פולי עליון 70 ק"ג ל-8, טי-בר 65 ק"ג ל-6, דדליפט רומני בזינוק ל-130 ק"ג ל-8, מקבילים 32.5 ק"ג, פרפר בקרוס 16.25 ק"ג, והיפ טראסט נכנס חזק עם 40 ק"ג כל צד. פשוט מטורף!</p>
                     </div>
 
                     <!-- User Details -->
@@ -144,7 +145,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">פולי עליון (מכונה)</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי</span>
-                                    <span class="font-bold text-lg">77 ק"ג x 7 <span class="text-xs text-gray-500">(כל צד)</span></span>
+                                    <span class="font-bold text-lg">70 ק"ג x 8 <span class="text-xs text-gray-500">(כל צד)</span></span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-machinePulldown"></canvas>
@@ -155,7 +156,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 mb-4">בולגרי (סמית')</h3>
                                 <div class="flex justify-between items-center mb-4 text-blue-600">
                                     <span class="font-bold">משקל עבודה נוכחי <span class="text-xs text-gray-500">(לכל צד)</span></span>
-                                    <span class="font-bold text-lg">31.75 ק"ג x 6</span>
+                                    <span class="font-bold text-lg">22.5 ק"ג x 6</span>
                                 </div>
                                 <div class="w-full h-40">
                                     <canvas id="miniChart-bulgarian"></canvas>
@@ -217,7 +218,6 @@
         const exerciseNames = {
             smithBenchPress: 'לחיצת חזה (סמית\')',
             wideRow: 'חתירה רחבה',
-            barbellRow: 'חתירה במוט',
             tBarRow: 'טי-בר (T-Bar)',
             tBarRowCloseGrip: 'טי-בר (אחיזה צרה)',
             lateralRaises: 'הרחקות כתפיים',
@@ -236,7 +236,8 @@
             rearDeltCableFly: 'כתף אחורית בקרוס',
             legPress: 'לחיצת רגליים',
             neutralChestPress: 'לחיצת חזה (ניטרלי)',
-            singleArmCableLateralRaise: 'הרחקות כתפיים בפולי (יד אחת)'
+            singleArmCableLateralRaise: 'הרחקות כתפיים בפולי (יד אחת)',
+            hipThrust: 'היפ טראסט'
         };
 
         const rawProgressData = {
@@ -247,20 +248,18 @@
                 { weight: 42.5, reps: 8, date: "30/04/2026", note: "כל צד" },
                 { weight: 43.75, reps: 6, date: "14/05/2026", note: "כל צד" },
                 { weight: 43.75, reps: 7, date: "23/05/2026", note: "כל צד" },
-                { weight: 45, reps: 6, date: "16/06/2026", note: "כל צד" }
+                { weight: 45, reps: 6, date: "25/06/2026", note: "כל צד, שיא!" }
             ],
             wideRow: [
                 { weight: 50, reps: 6, date: "02/04/2026" },
                 { weight: 55, reps: 9, date: "14/05/2026" }
             ],
-            barbellRow: [
-                { weight: 70, reps: 6, date: "16/06/2026" }
-            ],
             tBarRow: [
                 { weight: 60, reps: 5, date: "08/04/2026" },
                 { weight: 62.5, reps: 5, date: "16/04/2026" },
                 { weight: 62.5, reps: 6, date: "30/04/2026" },
-                { weight: 65, reps: 5, date: "11/06/2026" }
+                { weight: 65, reps: 5, date: "11/06/2026" },
+                { weight: 65, reps: 6, date: "25/06/2026", note: "שיא!" }
             ],
             tBarRowCloseGrip: [
                 { weight: 50, reps: 9, date: "30/04/2026" }
@@ -280,13 +279,12 @@
                 { weight: 65, reps: 7, date: "23/05/2026", note: "כל צד" },
                 { weight: 70, reps: 7, date: "11/06/2026", note: "כל צד" },
                 { weight: 65, reps: 8, date: "11/06/2026", note: "יד אחת" },
-                { weight: 77, reps: 7, date: "16/06/2026", note: "כל צד" }
+                { weight: 70, reps: 8, date: "25/06/2026", note: "כל צד, שיא!" }
             ],
             smithBulgarian: [
                 { weight: 22.5, reps: 6, date: "02/04/2026", note: "כל צד" },
                 { weight: 31.75, reps: 6, date: "11/06/2026", note: "כל צד" },
-                { weight: 22.5, reps: 8, date: "11/06/2026", note: "פאמפ" },
-                { weight: 31.75, reps: 6, date: "16/06/2026", note: "כל צד" }
+                { weight: 22.5, reps: 8, date: "11/06/2026", note: "פאמפ" }
             ],
             hackSquat: [
                 { weight: 220, reps: 6, date: "08/04/2026" },
@@ -299,21 +297,22 @@
             cableFly: [
                 { weight: 12.5, reps: 6, date: "02/04/2026" },
                 { weight: 15, reps: 6, date: "30/04/2026" },
-                { weight: 15, reps: 7, date: "23/05/2026" }
+                { weight: 15, reps: 7, date: "23/05/2026" },
+                { weight: 16.25, reps: 8, date: "25/06/2026", note: "בישיבה, שיא!" }
             ],
             weightedDips: [
                 { weight: 20, reps: 6, date: "08/04/2026", note: "משקל נוסף" },
                 { weight: 20, reps: 7, date: "30/04/2026", note: "משקל נוסף" },
                 { weight: 21.25, reps: 6, date: "14/05/2026", note: "משקל נוסף" },
-                { weight: 30, reps: 6, date: "11/06/2026", note: "PR!" }
+                { weight: 30, reps: 6, date: "11/06/2026", note: "PR!" },
+                { weight: 32.5, reps: 6, date: "25/06/2026", note: "PR חדש!" }
             ],
             machinePreacherCurl: [
                 { weight: 30, reps: 5, date: "02/04/2026" },
                 { weight: 35, reps: 8, date: "08/04/2026" },
                 { weight: 30, reps: 7, date: "16/04/2026" },
                 { weight: 30, reps: 8, date: "30/04/2026" },
-                { weight: 40, reps: 6, date: "23/05/2026" },
-                { weight: 42.5, reps: 6, date: "16/06/2026" }
+                { weight: 40, reps: 6, date: "23/05/2026" }
             ],
             skullCrusher: [
                 { weight: 35, reps: 6, date: "02/04/2026" }
@@ -323,7 +322,7 @@
                 { weight: 90, reps: 6, date: "30/04/2026" },
                 { weight: 90, reps: 8, date: "14/05/2026" },
                 { weight: 100, reps: 6, date: "11/06/2026" },
-                { weight: 100, reps: 6, date: "16/06/2026" }
+                { weight: 130, reps: 8, date: "25/06/2026", note: "PR מטורף!" }
             ],
             lyingLateralRaises: [
                 { weight: 20, reps: 6, date: "16/04/2026" },
@@ -349,6 +348,9 @@
             ],
             singleArmCableLateralRaise: [
                 { weight: 7.5, reps: 7, date: "11/06/2026", note: "6-7 חזרות" }
+            ],
+            hipThrust: [
+                { weight: 40, reps: 8, date: "25/06/2026", note: "כל צד" }
             ]
         };
         
@@ -540,3 +542,7 @@
     </script>
 </body>
 </html>
+
+
+
+```
